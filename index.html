@@ -1,0 +1,203 @@
+
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            #section1{
+                height: 100vh;
+                /*background-image: url('https://atmos.moshimoshi.tech/wp-content/uploads/2023/01/chrome-capture-2022-11-29-1-1.png');*/
+                
+                /*background-position: center;*/
+                /*background-repeat: no-repeat;*/
+                /*background-size: cover;*/
+                overflow: auto;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                
+            }
+            #section1 #myVideo {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                min-width: 100%; 
+                min-height: 100%;
+                transform: scale(1.2);
+                
+            }
+            #section1::-webkit-scrollbar {
+                display: none;
+            }
+            .section1Text {
+                font-size: 3rem;
+                color: white;
+                font-weight: bold;
+                text-shadow: 2px 2px 10px #000;
+               font-family: "canela regular", Sans-serif;
+            }
+            #section1_card1 {
+                height: 100vh;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "canela regular", Sans-serif;
+            } 
+            #section1_card1 > h1{
+                z-index: 2;
+            }
+            #section1_card2 {
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.4);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                 font-family: "canela regular", Sans-serif;
+            }
+            #section2{
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background:rgb(255, 203, 203)
+            }
+            .card_container{
+                margin: 0 auto;
+                height: 500px;
+                display: flex;
+                padding: 1rem;
+            }
+            .card{
+                margin: .5rem;
+                height: 100% !important;
+                width: 150px;
+                object-fit: cover;
+                transition: width 0.5s linear;
+                position: relative;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+            }
+            #card_img_1 {
+                background: url('https://atmos.moshimoshi.tech/wp-content/uploads/2023/01/Group-81475.png')
+            }
+            #card_img_2 {
+                background: url('https://atmos.moshimoshi.tech/wp-content/uploads/2023/01/pexels-sarah-nkb-14837963-3.png')
+            }
+            #card_img_3 {
+                background: url('https://atmos.moshimoshi.tech/wp-content/uploads/2023/01/pexels-pixabay-460295-1.png')
+            }
+            #card_img_4 {
+                background: url('https://atmos.moshimoshi.tech/wp-content/uploads/2023/01/pexels-scott-webb-136040-1.png')
+            }
+            .card:hover {
+                width: 300px;
+            }
+            .card:hover > .card_text {
+                opacity: 1;
+            }
+            .card_text {
+                opacity: 0;
+                color: white;
+                font-size: 2rem;
+                transition: opacity 0.5s linear;
+                position: absolute;
+                margin: 0;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            .card_text:hover {
+                opacity: 1;
+            }
+            .card_text:hover > .card{
+                width: 300px;
+                opacity: 1;
+            }
+            @media only screen and (max-width: 766px) {
+                 #section1_card1{
+                     margin-left:20px;                   
+                }
+                
+                .card_container{
+                    flex-direction: column;
+                    width: 90vw !important;
+                    height: auto !important;
+                }
+                .card {
+                    margin: 0.5rem;
+                }
+                .card{
+                    height: 14vh !important;
+                    width: 80vw !important;
+                }
+                .card:hover {
+                    width: 80vw;
+                }
+                .card_text{
+                    opacity:1 !important;
+                    font-size: 1.5rem !important;
+                }
+                #myVideo{
+                    transform: scale(4.5)  !important;
+                }
+            }
+        </style>
+    </head>
+<body>
+
+    <Section id="section1">
+        <video autoplay muted loop id="myVideo">
+            <source src="https://atmos.moshimoshi.tech/wp-content/uploads/2023/02/QmFubmVyIFZpZGVvX05ld18wMl9Mb3cubXA0.mp4" type="video/mp4">
+          </video>
+        <div id="section1_card1">
+            <h1 class="section1Text">A Nature-Inspired Villa Community</h1>
+        </div>
+        <div id="section1_card2">
+            <div class="card_container">
+                <a href="#nature">
+                <div class="card" id="card_img_1">
+                    <!-- <img class="card_img"  src="https://atmos.moshimoshi.tech/wp-content/uploads/2023/01/Group-81475.png" /> -->
+                    <span id="card_span_1" class="card_text">Nature</span>
+                </div>
+                </a>
+                                <a href="#community">
+                <div class="card" id="card_img_2">
+                    <!-- <img class="card_img"  src=https://atmos.moshimoshi.tech/wp-content/uploads/2023/01/pexels-sarah-nkb-14837963-3.png" /> -->
+                    <span id="card_span_2" class="card_text">Community</span>
+                </div>
+                </a>
+                <a href="#comfort">
+                <div class="card" id="card_img_3">
+                    <!-- <img class="card_img"  src="https://atmos.moshimoshi.tech/wp-content/uploads/2023/01/pexels-pixabay-460295-1.png" /> -->
+                    <span id="card_span_3" class="card_text">Comfort</span>
+                </div>
+                </a>
+                <a href="#resort">
+                <div class="card" id="card_img_4">
+                
+                    <!-- <img class="card_img"  src="https://atmos.moshimoshi.tech/wp-content/uploads/2023/01/pexels-scott-webb-136040-1.png" /> -->
+                    <span id="card_span_4" class="card_text">Resort Living</span>
+                </div>
+                </a>
+            </div>
+        </div>
+    </Section>
+
+    <script>
+        document.getElementById("section1").addEventListener('wheel', event => {
+            if (event.wheelDelta ? event.wheelDelta > 0 : event.deltaY < 0) {
+                section1.scrollTo({ top: 0, behavior: 'smooth' }); // console.log('Up')
+            } else {
+                section1.scrollTo({ top: 2000, behavior: 'smooth' }); // console.log('Down')
+                setTimeout(() => document.getElementById("section1_card1").style.display="none", 1000)
+                
+            }
+        })
+    </script>
+</body>
+</html>
+ 
